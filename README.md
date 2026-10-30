@@ -22,5 +22,5 @@ Siga os passos abaixo para recriar o ambiente e rodar a API na sua máquina:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/credit-scoring-api.git
+   git clone https://github.com/hugocileiro/credit-scoring-api.git
    cd credit-scoring-api
