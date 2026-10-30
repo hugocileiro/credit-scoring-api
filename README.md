@@ -1,10 +1,10 @@
 ﻿# Credit Scoring API
 
 **Resumo do Projeto:** 
-Este projeto implementa uma API RESTful para disponibilizar um modelo preditivo de Machine Learning de análise de risco de crédito. O sistema recebe dados financeiros básicos de um cliente e retorna a probabilidade dele se tornar inadimplente, auxiliando na tomada de decisão automatizada de concessão de crédito.
+este projeto implementa uma API RESTful para disponibilizar um modelo preditivo de Machine Learning de análise de risco de crédito. O sistema recebe dados financeiros básicos de um cliente e retorna a probabilidade dele se tornar inadimplente, auxiliando na tomada de decisão automatizada de concessão de crédito.
 
 **Origem do Modelo:** 
-Opção B (Pipeline próprio). O modelo foi desenvolvido do zero para este projeto, simulando uma base de dados sintética de clientes (renda, dívida e idade) para treinar um pipeline de `RandomForestClassifier` com `StandardScaler`. Métricas alcançadas no conjunto de teste: Acurácia ~98%, F1-Score ~97%, ROC-AUC ~99%.
+opção B (Pipeline próprio). O modelo foi desenvolvido do zero para este projeto, simulando uma base de dados sintética de clientes (renda, dívida e idade) para treinar um pipeline de `RandomForestClassifier` com `StandardScaler`. Métricas alcançadas no conjunto de teste: Acurácia ~98%, F1-Score ~97%, ROC-AUC ~99%.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -18,7 +18,7 @@ Opção B (Pipeline próprio). O modelo foi desenvolvido do zero para este proje
 
 ## ⚙️ Como Executar o Projeto
 
-Siga os passos abaixo para recriar o ambiente e rodar a API na sua máquina:
+siga os passos abaixo para recriar o ambiente e rodar a API na sua máquina:
 
 1. **Clone o repositório:**
    ```bash
