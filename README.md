@@ -1,22 +1,26 @@
 ﻿# Credit Scoring API
 
-API de inferência de credit scoring com FastAPI, pipeline scikit-learn
-serializado e carregado na RAM via lifespan.
+**Resumo do Projeto:** 
+Este projeto implementa uma API RESTful para disponibilizar um modelo preditivo de Machine Learning de análise de risco de crédito. O sistema recebe dados financeiros básicos de um cliente e retorna a probabilidade dele se tornar inadimplente, auxiliando na tomada de decisão automatizada de concessão de crédito.
 
-## Estrutura
+**Origem do Modelo:** 
+Opção B (Pipeline próprio). O modelo foi desenvolvido do zero para este projeto, simulando uma base de dados sintética de clientes (renda, dívida e idade) para treinar um pipeline de `RandomForestClassifier` com `StandardScaler`. Métricas alcançadas no conjunto de teste: Acurácia ~98%, F1-Score ~97%, ROC-AUC ~99%.
 
-- src/train.py - treina e serializa o modelo em artifacts/model.pkl
-- src/schemas.py - validação estrita com Pydantic v2
-- src/service.py - camada de serviço desacoplada
-- src/main.py - app FastAPI com /health e /predict
+## 🛠️ Tecnologias Utilizadas
 
-## Como rodar
+- **Python 3.14** (Ambiente Virtual `venv`)
+- **FastAPI** (Framework web ASGI)
+- **Uvicorn** (Servidor de aplicação)
+- **Pydantic** (Validação estrita de dados)
+- **Scikit-Learn** (Treinamento do modelo de ML)
+- **Pandas & NumPy** (Manipulação de dados)
+- **Joblib** (Serialização do modelo)
 
-    pip install -r requirements.txt
-    python -m src.train
-    uvicorn src.main:app --reload
+## ⚙️ Como Executar o Projeto
 
-## Endpoints
+Siga os passos abaixo para recriar o ambiente e rodar a API na sua máquina:
 
-- GET /health - status do serviço e do modelo
-- POST /predict - probabilidade de inadimplência
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/credit-scoring-api.git
+   cd credit-scoring-api
