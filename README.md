@@ -18,9 +18,72 @@ Opção B (Pipeline próprio). O modelo foi desenvolvido do zero para este proje
 
 ## ⚙️ Como Executar o Projeto
 
-Siga os passos abaixo para recriar o ambiente e rodar a API na sua máquina:
+Siga os passos abaixo para configurar o ambiente e executar a API de Credit Scoring localmente.
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/credit-scoring-api.git
-   cd credit-scoring-api
+1. Clone o repositório
+
+Abra o terminal e execute:
+
+bash
+git clone https://github.com/hugocileiro/credit-scoring-api.git
+cd credit-scoring-api
+
+2. Crie e ative o ambiente virtual
+
+Crie um ambiente virtual para isolar as dependências do projeto.
+
+Windows (PowerShell):
+
+powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+
+Linux / macOS:
+
+bash
+python3 -m venv .venv
+source .venv/bin/activate
+
+3. Instale as dependências
+
+Com o ambiente virtual ativado, instale todas as bibliotecas necessárias:
+
+bash
+pip install -r requirements.txt
+
+4. Treine e serialize o modelo (Fase 1)
+
+Execute o comando abaixo para iniciar o treinamento do modelo de Machine Learning:
+
+bash
+python -m src.train
+
+
+Esse processo irá:
+
+Treinar o modelo de Credit Scoring.
+Exibir as métricas de desempenho no terminal.
+Serializar o modelo treinado.
+Gerar o arquivo model.pkl dentro da pasta artifacts/.
+5. Inicie o servidor da API
+
+Após o treinamento do modelo, execute:
+
+bash
+uvicorn src.main:app --reload
+
+
+A API estará disponível localmente no endereço:
+
+http://127.0.0.1:8000
+
+Documentação interativa
+
+O FastAPI disponibiliza uma documentação interativa que permite testar os endpoints diretamente pelo navegador.
+
+Swagger UI: http://127.0.0.1:8000/docs
+ReDoc: http://127.0.0.1:8000/redoc
+
+
+Pronto! Com essas etapas, o ambiente estará configurado, o modelo treinado e a API em execução localmente.
