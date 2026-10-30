@@ -38,3 +38,5 @@ def predict(payload: CreditFeatures):
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Erro na predição: {exc}")
     return PredictionResponse(**result)
+
+# rotas: /health e /predict implementadas com tratamento de erros
